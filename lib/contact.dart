@@ -6,10 +6,9 @@ class ContactPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFE6E6FA), // Light background color for the page
+      backgroundColor: Color(0xFFE6E6FA),
       body: Column(
         children: [
-          // Custom Navigation Bar (Header)
           Container(
             padding: EdgeInsets.symmetric(horizontal: 24),
             height: 70,
@@ -59,15 +58,13 @@ class ContactPage extends StatelessWidget {
               ],
             ),
           ),
-
-          // Form Container
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(24),
               child: Container(
-                padding: EdgeInsets.all(40), // Increased padding for more space
+                padding: EdgeInsets.all(40),
                 decoration: BoxDecoration(
-                  color: Colors.white, // White background for the form container
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(12),
                   boxShadow: [
                     BoxShadow(
@@ -87,7 +84,7 @@ class ContactPage extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
-                          color: Color(0xFF6A3E8A), // Accent color for the header
+                          color: Color(0xFF6A3E8A),
                         ),
                       ),
                       SizedBox(height: 20),
@@ -123,26 +120,23 @@ class ContactPage extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 20),
-                      
-                      // Center the button
                       Center(
                         child: ElevatedButton(
                           onPressed: () {
-                            // Form submission logic can be added here
                             ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                               content: Text('Message sent!'),
                             ));
                           },
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Color(0xFF8A2BE2), // New button color
-                            padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15), // Bigger button size
+                            backgroundColor: Color(0xFF8A2BE2),
+                            padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
                           ),
                           child: Text(
                             'Send',
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
-                              color: Colors.white, // White text on the button
+                              color: Colors.white,
                             ),
                           ),
                         ),
@@ -153,8 +147,6 @@ class ContactPage extends StatelessWidget {
               ),
             ),
           ),
-
-          // Footer
           Container(
             color: Color(0xFFE1C6D8),
             padding: EdgeInsets.all(12),
@@ -176,7 +168,6 @@ class ContactPage extends StatelessWidget {
     );
   }
 
-  // Navigation link widget
   Widget navLink(BuildContext context, String title, String route) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8.0),

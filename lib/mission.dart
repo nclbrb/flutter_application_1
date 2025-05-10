@@ -4,11 +4,9 @@ class MissionPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // Background color of the page
       backgroundColor: Color(0xFFE6E6FA),
       body: Column(
         children: [
-          // Navbar (Header)
           Container(
             padding: EdgeInsets.symmetric(horizontal: 24),
             height: 70,
@@ -58,14 +56,11 @@ class MissionPage extends StatelessWidget {
               ],
             ),
           ),
-
-          // Main Content (Mission and Vision)
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(24),
               child: Column(
                 children: [
-                  // Container for the mission content
                   Container(
                     padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
@@ -94,8 +89,6 @@ class MissionPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 20),
-
-                  // Container for the vision content
                   Container(
                     padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
@@ -127,8 +120,6 @@ class MissionPage extends StatelessWidget {
               ),
             ),
           ),
-
-          // Footer
           Container(
             color: Color(0xFFE1C6D8),
             padding: EdgeInsets.all(12),
@@ -150,7 +141,6 @@ class MissionPage extends StatelessWidget {
     );
   }
 
-  // Navigation link widget
   Widget navLink(BuildContext context, String title, String route) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
